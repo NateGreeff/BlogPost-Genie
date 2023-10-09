@@ -1,0 +1,35 @@
+:root {
+    --background-color: rgb(2, 4, 10);
+    --main-text-color: rgb(255, 255, 255);
+    --dark-text-color: rgb(124, 133, 144);
+    --link-color: #1a73e8;
+    --header-color: #1a73e8;
+    --border-color: rgb(33, 38, 45);
+
+    --color1: rgb(13, 17, 22);
+    --color2: rgb(22, 17, 34);
+    --color3: rgb(76, 76, 76);
+    --color4: rgb(100, 100, 100);
+    --color5: rgb(138, 138, 138);
+    --color6: rgb(176, 176, 176);
+    --shadow-color: rgb(176, 176, 176, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    background-image: url('/img/fog.eps');
+    color: var(--main-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #0ff, 0 0 14px #0ff, 0 0 16px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    color:var(--header-color);
+    user-select: none;
+}

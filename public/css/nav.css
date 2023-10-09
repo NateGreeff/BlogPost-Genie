@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: solid var(--border-color);
+    background-color: var(--color1);
+    height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    user-select: none;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+    &:hover {
+        color: var(--link-color);
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    & a {
+        margin: 0 1rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+    }
+}
