@@ -2,7 +2,7 @@ main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 section {
@@ -20,15 +20,52 @@ section {
 
 main #sideNav {
     width: 20%;
+    user-select: none;
     & h2 {
         margin: 1rem 0;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         border-bottom: 3px solid var(--border-color);
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    & li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        min-height: 100px;
+        width: 90%;
+        padding: 2px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border-radius: 7px;
+        border: solid 2px var(--color1);
+        margin-bottom: 5px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color:lightblue;
+            box-shadow: 0 0 5px var(--shadow-color);
+            border-top: solid 1px white;
+            border-bottom: solid 1px white;
+            scale: 1.1;
+        }
     }
 }
 
 main #content {
     width: 70%;
+    font-size: 1.3rem;
+    & h2 {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    & p {
+        margin: 30px
+    }
 }
 
 @media screen and (max-width: 500px) {

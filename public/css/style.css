@@ -21,6 +21,31 @@
     box-sizing: border-box;
 }
 
+/*  -- Scroll Bar -- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+    border-radius: 5px;
+  }
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -28,7 +53,7 @@ body {
     color: var(--main-text-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #0ff, 0 0 14px #0ff, 0 0 16px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
     color:var(--header-color);
     user-select: none;

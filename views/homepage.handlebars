@@ -3,10 +3,16 @@
 <main>
     <section id="sideNav">
         <h2>Recent Posts</h2>
+        <ul id="recent-posts">
+            {{#each blogPosts}}
+            <li data-id="{{this.id}}" class="post-title">
+                <div>{{this.title}}</div>
+            </li>
+            {{/each}}
     </section>
 
-    <section id="content">
-
-
+    <section class="post-body" id="content">
+        
     </section>
 </main>
+<script src="/js/homePosts.js"></script>

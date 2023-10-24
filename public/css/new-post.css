@@ -1,0 +1,68 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color1);
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0 0 10px var(--shadow-color);
+    width: 80%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1.4rem;
+
+    & label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1%;
+    }
+
+    & input, textarea {
+        width: 100%;
+        margin: 1%;
+        padding: 1%;
+        border-radius: 5px;
+        resize: vertical;
+        border: 1px solid var(--color5);
+        background-color: var(--color3);
+        color: var(--main-text-color);
+        font-size: 1.3rem;
+    }
+
+
+    & button {
+        width: 100%;
+        margin: 1%;
+        padding: 1%;
+        border-radius: 5px;
+        border: 1px solid var(--border-color);
+        background-color: var(--color2);
+        color: var(--main-text-color);
+        font-size: 1.3rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--color4);
+        }
+        &:active {
+            background-color: var(--color2);
+        }
+    }
+
+}
