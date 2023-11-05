@@ -16,6 +16,7 @@ section {
     margin: 2%;
     padding: 1%;
     box-shadow: 0 0 10px var(--shadow-color);
+    overflow: hidden;
 }
 
 main #sideNav {
@@ -38,7 +39,7 @@ main #sideNav {
         text-align: center;
         list-style: none;
         min-height: 100px;
-        width: 90%;
+        width: 100%;
         padding: 2px;
         cursor: pointer;
         font-size: 1.2rem;
@@ -63,9 +64,66 @@ main #content {
         margin-bottom: 30px;
         margin-top: 30px;
     }
-    & p {
-        margin: 30px
+    & p, & ul, & ol {
+        margin: 30px;
+        list-style: none;
     }
+}
+
+.post-header {
+    color:aqua;
+}
+
+.comment-item {
+    border: solid 1px var(--border-color);
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.comment-text {
+    padding-left: 15px;
+    color: lightgrey;
+}
+
+#comment-container {
+    margin-top: 100px;
+}
+
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 30px;
+    & input, & textarea {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--border-color);
+        background-color: var(--color1);
+        color: var(--main-text-color);
+    }
+    & button[type="submit"] {
+        width: 50%;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--border-color);
+        background-color: var(--color1);
+        color: var(--main-text-color);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color:lightblue;
+            box-shadow: 0 0 5px var(--shadow-color);
+            border-top: solid 1px white;
+            border-bottom: solid 1px white;
+            scale: 1.1;
+        }
+    }
+
 }
 
 @media screen and (max-width: 500px) {

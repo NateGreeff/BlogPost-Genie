@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { BlogPosts } = require('../../models');
+const { BlogPosts, User, Comments } = require('../../models');
 const withAuth = require('../../utils/auth');
+
 
 router.get('/', async (req, res) => {
   try {
@@ -37,6 +38,20 @@ router.get('/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Comments,
+          attributes: ['id', 'body', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['name'],
+          },
+        },
+      ],
     });
 
     if (!postData) {

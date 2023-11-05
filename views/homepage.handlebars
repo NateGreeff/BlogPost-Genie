@@ -11,8 +11,24 @@
             {{/each}}
     </section>
 
-    <section class="post-body" id="content">
-        
+    <section id="content">
+        <div class="post-body">
+            <h2>🎉 Welcome! 🎉</h2>
+            <p>This is a blog site where you can post your thoughts and ideas on coding. You can also comment on other people's posts.</p>
+            <p>⬅️ Click on a recent post to get started, or login/register to create your own post.</p>
+        </div>
+        <div id='comments' class="hidden">
+            {{!-- Comment Form --}}
+            {{#if logged_in}}
+            <form id="comment-form">
+                <h3>Leave a comment</h3>
+                <input type="textarea" id="comment-text" name="comment-text" rows="4" cols="50" placeholder="Enter your comment here..."></input>
+                <button id="comment-submit" type="submit">Submit</button>
+            {{else}}
+            <p>Please login or register to leave a comment.</p>
+            {{/if}}
+        </div>
     </section>
+
 </main>
 <script src="/js/homePosts.js"></script>
